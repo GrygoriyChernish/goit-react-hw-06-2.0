@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+}

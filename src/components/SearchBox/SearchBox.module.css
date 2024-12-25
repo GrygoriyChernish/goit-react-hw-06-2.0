@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
