@@ -8,14 +8,17 @@ import {
   input,
   errorMessage,
 } from './ContactForm.module.css';
+import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contactsSlice';
 
 const initialValues = {
   name: '',
   number: '',
 };
-const ContactForm = ({ addContact }) => {
+const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
+  const dispatch = useDispatch();
 
   const ContactFormSchema = Yup.object().shape({
     name: Yup.string()
@@ -29,7 +32,7 @@ const ContactForm = ({ addContact }) => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    addContact(prevContacts => [...prevContacts, { ...values, id: nanoid() }]);
+    dispatch(addContact({ ...values, id: nanoid() }));
     resetForm();
   };
   return (
